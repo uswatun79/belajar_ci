@@ -1,6 +1,6 @@
 <?php 
 
-define('BASEURL', 'http://localhost/pbm/mvc2');
+define('BASEURL', 'http://localhost/belajar_ci/');
 
 // DB
 define('DB_HOST', 'localhost');
