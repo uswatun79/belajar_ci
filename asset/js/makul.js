@@ -19,7 +19,7 @@ $(function() {
         const id = $(this).data('id');
         
         $.ajax({
-            url: 'http://localhost/pbm/belajar_ci/getubah',
+            url: 'http://localhost/belajar_ci/makul/getubah',
             data: {id : id},
             method: 'post',
             dataType: 'json',
