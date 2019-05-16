@@ -5,7 +5,7 @@
         <h5 class="card-title"><?= $data['mkl']['makul_kode']; ?></h5>
         <h6 class="card-subtitle mb-2 text-muted"><?= $data['mkl']['makul_nama']; ?></h6>
         <p class="card-text"><?= $data['mkl']['makul_sks']; ?></p>
-        <a href="<?= BASEURL; ?>/makul" class="card-link">Kembali</a>
+        <a href="<?= BASEURL; ?>/makul" class="card-link">Kembali ke menu utama</a>
       </div>
     </div>
 

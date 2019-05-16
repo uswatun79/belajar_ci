@@ -9,7 +9,7 @@
   <div class="row mb-3">
     <div class="col-lg-6">
       <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
-        Tambah Data Makul
+        Tambah Data Mata Kuliah
       </button>
     </div>
   </div>
@@ -18,7 +18,7 @@
     <div class="col-lg-6">
       <form action="<?= BASEURL; ?>/makul/cari" method="post">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="cari makul.." name="keyword" id="keyword" autocomplete="off">
+          <input type="text" class="form-control" placeholder="cari mata kuliah.." name="keyword" id="keyword" autocomplete="off">
           <div class="input-group-append">
             <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
           </div>
