@@ -14,12 +14,12 @@ $(function() {
         
         $('#formModalLabel').html('Ubah Data Makul');
         $('.modal-footer button[type=submit]').html('Ubah Data');
-        $('.modal-content form').attr('action', 'http://localhost/pbm/mvc2/makul/ubah');
+        $('.modal-content form').attr('action', 'http://localhost/belajar_ci/makul/ubah');
 
         const id = $(this).data('id');
         
         $.ajax({
-            url: 'http://localhost/pbm/mvc2/makul/getubah',
+            url: 'http://localhost/pbm/belajar_ci/getubah',
             data: {id : id},
             method: 'post',
             dataType: 'json',

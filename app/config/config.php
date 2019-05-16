@@ -1,6 +1,6 @@
 <?php 
 
-define('BASEURL', 'http://localhost/belajar_ci/');
+define('BASEURL', 'http://localhost/belajar_ci');
 
 // DB
 define('DB_HOST', 'localhost');
