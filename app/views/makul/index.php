@@ -29,7 +29,7 @@
 
   <div class="row">
       <div class="col-lg-6">
-        <h3>Data Makul</h3>
+        <h3>Data Mata Kuliah</h3>
         <ul class="list-group">
           <?php foreach( $data['mkl'] as $mkl ) : ?>
             <li class="list-group-item">
