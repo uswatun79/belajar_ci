@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2019 at 12:00 PM
+-- Generation Time: May 16, 2019 at 06:44 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -41,28 +41,7 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`) VALUES
-(1, 'Amir Nurdin', '1231312312', 'amir@gmail.com', 'Teknik Informatika');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `makul`
---
-
-CREATE TABLE `makul` (
-  `id` int(10) NOT NULL,
-  `makul_kode` varchar(10) NOT NULL,
-  `makul_nama` varchar(60) NOT NULL,
-  `makul_sks` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `makul`
---
-
-INSERT INTO `makul` (`id`, `makul_kode`, `makul_nama`, `makul_sks`) VALUES
-(1, 'TI001', 'Pemrograman Framework 2', 4),
-(2, 'TI002', 'Pemrograman Database', 4);
+(1, 'Amir Nurdin 1', '1231312312', 'amir@gmail.com', 'Teknik Informatika');
 
 --
 -- Indexes for dumped tables
@@ -75,12 +54,6 @@ ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `makul`
---
-ALTER TABLE `makul`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -89,12 +62,6 @@ ALTER TABLE `makul`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `makul`
---
-ALTER TABLE `makul`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
