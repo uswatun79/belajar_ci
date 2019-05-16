@@ -1,5 +1,5 @@
 <div class="container mt-3">
-    
+
   <div class="row">
     <div class="col-lg-6">
       <?php Flasher::flash(); ?>
@@ -29,7 +29,7 @@
 
   <div class="row">
       <div class="col-lg-6">
-        <h3>Data Mahasiswa</h3>
+        <h3>list Data Mahasiswa</h3>
         <ul class="list-group">
           <?php foreach( $data['mhs'] as $mhs ) : ?>
             <li class="list-group-item">
@@ -39,7 +39,7 @@
                 <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right">detail</a>
             </li>
           <?php endforeach; ?>
-        </ul>      
+        </ul>
       </div>
   </div>
 
@@ -52,7 +52,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>          
+        </div>
         <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
           <div class="modal-body">
             <input type="hidden" name="id" id="id">
@@ -93,6 +93,3 @@
   </div>
 
 </div>
-
-
-
