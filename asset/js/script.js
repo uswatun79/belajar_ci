@@ -15,12 +15,12 @@ $(function() {
         
         $('#formModalLabel').html('Ubah Data Mahasiswa');
         $('.modal-footer button[type=submit]').html('Ubah Data');
-        $('.modal-content form').attr('action', 'http://localhost/pbm/mvc2/mahasiswa/ubah');
+        $('.modal-content form').attr('action', 'http://localhost/belajar_ci/mahasiswa/ubah');
 
         const id = $(this).data('id');
         
         $.ajax({
-            url: 'http://localhost/pbm/mvc2/mahasiswa/getubah',
+            url: 'http://localhost/belajar_ci/mahasiswa/getubah',
             data: {id : id},
             method: 'post',
             dataType: 'json',
