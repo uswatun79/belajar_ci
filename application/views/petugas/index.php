@@ -9,16 +9,16 @@
     <div class="row mb-3">
       <div class="col-lg-6">
         <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
-          Tambah Data Mahasiswa 
+          Tambah Data petugas 
         </button>
       </div>
     </div>
 
     <div class="row mb-3">
       <div class="col-lg-6">
-        <form action="<?php echo base_url();?>/mahasiswa/cari" method="post">
+        <form action="<?php echo base_url();?>/petugas/cari" method="post">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="cari mahasiswa.." name="keyword" id="keyword" autocomplete="off">
+            <input type="text" class="form-control" placeholder="cari nama petugas.." name="keyword" id="keyword" autocomplete="off">
             <div class="input-group-append">
               <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
             </div>
@@ -29,14 +29,14 @@
   
     <div class="row">
         <div class="col-lg-6">
-          <h3>Daftar Mahasiswa</h3>
+          <h3>Daftar Nama petugas</h3>
           <ul class="list-group">
-            <?php foreach($mhs as $mhs ) : ?>
+            <?php foreach($ptg as $value ) : ?>
               <li class="list-group-item">
-                  <?= $mhs->nama; ?>
-                  <a href="<?php echo base_url();?>mahasiswa/hapus/<?= $mhs->id; ?>" class="badge badge-danger float-right" onclick="return confirm('yakin?');">hapus</a>
-                  <a href="<?php echo base_url();?>mahasiswa/ubah/<?php echo $mhs->id; ?>" class="badge badge-success float-right tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mhs->id; ?>">ubah</a>
-                  <a href="<?php echo base_url();?>mahasiswa/detail/<?= $mhs->id; ?>" class="badge badge-primary float-right">detail</a>
+                  <?= $value->nama; ?>
+                  <a href="<?php echo base_url();?>petugas/hapus/<?= $value->id; ?>" class="badge badge-danger float-right" onclick="return confirm('yakin?');">hapus</a>
+                  <a href="<?php echo base_url();?>petugas/ubah/<?php echo $value->id; ?>" class="badge badge-success float-right tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $value->id; ?>">ubah</a>
+                  <a href="<?php echo base_url();?>petugas/detail/<?= $value->id; ?>" class="badge badge-primary float-right">detail</a>
               </li>
             <?php endforeach; ?>
           </ul>      
@@ -51,41 +51,31 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="formModalLabel">Tambah Data Mahasiswa</h5>
+        <h5 class="modal-title" id="formModalLabel">Tambah Data petugas</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         
-        <form action="<?php echo base_url();?>/mahasiswa/tambah" method="post">
+        <form action="<?php echo base_url();?>/petugas/tambah" method="post">
           <input type="hidden" name="id" id="id">
           <div class="form-group">
-            <label for="nama">Nama</label>
+            <label for="nama">Nama Petugas</label>
             <input type="text" class="form-control" id="nama" name="nama" autocomplete="off" required>
           </div>
 
           <div class="form-group">
-            <label for="nrp">NRP</label>
-            <input type="number" class="form-control" id="nrp" name="nrp" autocomplete="off">
+            <label for="alamat">Alamat</label>
+            <input type="text" class="form-control" id="alamat" name="alamat" autocomplete="off">
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com">
+            <label for="bidang">Bidang Kerja</label>
+            <input type="bidang" class="form-control" id="bidang" name="bidang">
           </div>
 
-          <div class="form-group">
-            <label for="jurusan">Jurusan</label>
-            <select class="form-control" id="jurusan" name="jurusan">
-              <option value="Teknik Informatika">Teknik Informatika</option>
-              <option value="Teknik Mesin">Teknik Mesin</option>
-              <option value="Teknik Industri">Teknik Industri</option>
-              <option value="Teknik Pangan">Teknik Pangan</option>
-              <option value="Teknik Planologi">Teknik Planologi</option>
-              <option value="Teknik Lingkungan">Teknik Lingkungan</option>
-            </select>
-          </div>
+          
       </div>
       <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -98,7 +88,7 @@
 
 <script src="<?php echo base_url();?>assets/js/jquery-3.3.1.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/popper.min.js"></script>
-<script src="<?php echo base_url();?>assets/js/mahasiswa.js"></script>
+<script src="<?php echo base_url();?>assets/js/petugas.js"></script>
 
 
 
